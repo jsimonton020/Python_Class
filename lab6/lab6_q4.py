@@ -27,3 +27,17 @@ def main():
     print(format(unum, uwidth))
 
 main()
+
+'''
+Enter an integer: 12345
+Enter width: 1
+12345
+
+Enter an integer: 12345
+Enter width: 5
+12345
+
+Enter an integer: 12345
+Enter width: 7
+0012345
+'''
