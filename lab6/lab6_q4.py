@@ -1,12 +1,14 @@
-def format(num, width):
-    # Find the number of digits in num
+def check_digits(num):
     # The number of times through the loop is how many digits there are
     digits = 0
     while num > 0: # Continue until num is exhausted
         num = num // 10 # Divide by 10 and return quotient
         # 12345 // 10 = 1234, 1234 // 10 = 123, and so on
         digits += 1 # Add 1 to digits
+    return digits
 
+def format(num, width):
+    digits = check_digits(num) # Get the number of digits
     snum = str(num) # Convert num into a string
     if width <= digits:
         # If the number of digits is less than the specified width,
