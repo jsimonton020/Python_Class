@@ -1,7 +1,7 @@
 class Stock:
 
     # contructor has 4 private data fields, prices default to 0
-    def __init__(self, symbol, name, previous_closing_price = 0, current_price = 0):
+    def __init__(self, symbol, name, previous_closing_price=0, current_price=0):
         self.__symbol = symbol
         self.__name = name
         self.__previous_closing_price = previous_closing_price
@@ -34,8 +34,8 @@ class Stock:
     # method to calculate the change percentage
     # I don't multiply by 100, since format() will by using %
     def get_change_percent(self):
-        return format((self.__current_price - self.__previous_closing_price)\
-        / self.__previous_closing_price, ".2%")
+        return format((self.__current_price - self.__previous_closing_price)
+                      / self.__previous_closing_price, ".2%")
 
 
 def main():
