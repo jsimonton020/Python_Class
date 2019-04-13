@@ -1,21 +1,18 @@
 def print_chars(ch1, ch2, num_per_line):
-    a = ord(ch1) # Get the decimal value of ch1 (1 = 49 in ASCii)
-    b = ord(ch2) # Get the decimal value of ch2 (Z = 90 in ASCii)
-    c = (b - a) + 1 # Find the difference between a and b,
-                    # so we know how many times to run the loop
-                    # 49 - 90 = 41, if we don't add 1 it will stop at 'Y'
+    d_ch1 = ord(ch1) # Get the decimal value of ch1 (1 = 49 in ASCii)
+    d_ch2 = ord(ch2) # Get the decimal value of ch2 (Z = 90 in ASCii)
     y = 1 # Counter to keep track
 
-    while y <= c:
+    while y <= (d_ch2 - d_ch1) + 1:
         if y % num_per_line == 0:
             # If y divides into num_per_line evenly, print on a new line,
             # this will happen N(th) time depending on the argument given
-            print(chr(a))
+            print(chr(d_ch1))
         else:
             # Otherwise print on the same line with a space
-            print(chr(a), end = " ")
-        # Add 1 to 'a', this will represent the next value on the ASCii table
-        a += 1
+            print(chr(d_ch1), end = "")
+        # Add 1 to d_ch1, this will represent the next value on the ASCii table
+        d_ch1 += 1
         # Increase counter by 1
         y += 1
 
