@@ -1,15 +1,13 @@
-def check_digits(num):
-    # The number of times through the loop is how many digits there are
-    digits = 0
-    while num > 0: # Continue until num is exhausted
-        num = num // 10 # Divide by 10 and return quotient
-        # 12345 // 10 = 1234, 1234 // 10 = 123, and so on
-        digits += 1 # Add 1 to digits
-    return digits
-
 def format(num, width):
-    digits = check_digits(num) # Get the number of digits
-    snum = str(num) # Convert num into a string
+    # First find the number of digits
+    digits = 0
+    temp_num = num
+    while temp_num > 0:  # Continue until temp_num is exhausted
+        temp_num = temp_num // 10  # Divide by 10 and return quotient
+        # 12345 // 10 = 1234, 1234 // 10 = 123, and so on
+        digits += 1  # Add 1 to digits
+
+    snum = str(num)  # Convert num into a string
     if width <= digits:
         # If the number of digits is less than the specified width,
         # just return the string value
@@ -20,6 +18,7 @@ def format(num, width):
         # Print '0' times however many spaces needed, concatenate snum
         snum = ('0' * space) + snum
         return snum
+
 
 def main():
     unum = eval(input("Enter an integer: "))
