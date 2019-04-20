@@ -1,13 +1,10 @@
 def reverse(s):
-    string = ""
-    for i in s:
-        s2 = s[:-1]
-        string += s2
-    print(string)
-
+    rstring = ""
+    for chr in s:
+        rstring = chr + rstring
+    return rstring
 
 def main():
-    s = input("Enter string: ")
-    reverse(s)
+    print(reverse(input("Enter a string: ")))
 
 main()
